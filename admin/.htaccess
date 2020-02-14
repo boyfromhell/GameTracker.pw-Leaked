@@ -1,0 +1,23 @@
+RewriteEngine on
+
+# osnova
+RewriteRule ^servers$	                       "index.php?page=servers"
+RewriteRule ^servers/(.*)$				   "index.php?page=servers&g_name=$1"
+RewriteRule ^server_info/(.*)$			   "index.php?page=server_info&ip=$1"
+RewriteRule ^banned/servers$	                       "index.php?page=banned_s"
+RewriteRule ^memberlist$	                       "index.php?page=memberlist"
+RewriteRule ^member/(.*)$			               "index.php?page=member&username=$1"
+RewriteRule ^communities$	                       "index.php?page=communities"
+RewriteRule ^community_info/(.*)$			   "index.php?page=community_info&id=$1"
+RewriteRule ^messages$	                       "index.php?page=messages"
+RewriteRule ^message_info/(.*)$			   "index.php?page=message_info&id=$1"
+RewriteRule ^user_log$	                       "index.php?page=user_log"
+RewriteRule ^admin_log$	                       "index.php?page=admin_log"
+RewriteRule ^news$	                       "index.php?page=news"
+
+#ostalo
+RewriteRule ^images/$                                   "/index.php"
+RewriteRule ^languages/$                                      "/index.php"
+
+order deny,allow
+allow from all
